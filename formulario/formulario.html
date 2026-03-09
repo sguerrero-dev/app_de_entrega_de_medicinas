@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor_fondo">
+        <img src="../imagenes/logo.png" alt="logo farmapp" title="farmapp"
+         class="logo">
+        </div>
+    </header>
+    <main>
+
+       <form action="../mis_recetas/index.html" method="GET">
+<div class="formulario">
+<label>Nombre</label><br>
+<input type="text" name="nombre" placeholder="nombre" required>
+
+<label>Apellido</label><br>
+<input type="text" name="apellido" placeholder="apellido" required>
+
+<label>Cédula</label><br>
+<input type="number" name="cedula" minlength="10" required>
+
+<label>EPS</label><br>
+<input type="text" name="eps" required>
+
+<button type="submit" class="continuar-boton">Continuar</button>
+</div>
+
+</form>
+        
+    </main>
+    
+</body>
+</html>
