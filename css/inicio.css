@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+    --color-primary: #4A90D9;
+    --color-secundary: aqua;
+    --color-third:#2E86C1;
+}
+
+body{
+    background-color: var(--color-primary);
+}
+.contenedor_logo{
+    
+    margin: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contenedor_logo-imagen{
+    height: 66px;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.contenedor_logo-titulo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+    font-size: medium;
+}
+.seccion_carrito-destok{
+    display: none;
+    padding-left: 00px;
+    margin-left: 600px;
+
+    
+    
+}
+
+ .seccion_carrito-destok a{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+    color: azure;
+    font-weight: bold;
+    border: 1px solid var(--color-secundary);
+    background-color: #2E86C1;
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin: 2px;
+    padding: 5px;
+
+    transition: all transform 0.3s ease-in-out;
+}
+
+.seccion_carrito-destok a:hover{
+    transform: scale(1.1);
+    color: yellow;
+}
+
+
+.cabezera-carrito{
+    margin: 20px;
+    height: 40px;
+    
+    border-radius: 50%;
+    position: fixed;
+    right: 10px;
+    bottom:  20px;
+    right: 10px;
+    transition: transform 0.3 s;
+    display: block;
+}
+
+
+
+.cabezera-carrito:hover{
+    transform: translateY(-3px);
+
+}
+
+
+.cabezera-seccion {
+    margin: 20px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+    display: block;
+    
+    
+    
+    /* Agregamos esto aquí para que el estado base sea claro */
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    
+    /* Esto asegura que el punto de crecimiento sea el centro */
+    transform-origin: center; 
+}
+
+.cabezera-seccion:hover {
+    /* Solo escala, no agregues translate ni movimientos extras */
+    transform: scale(1.1); 
+}
+.contenedor_ul_nav{
+    background-color: aliceblue;
+    padding: 5px;
+}
+.item {
+    border: 1px solid aqua;
+    border-radius: 6px;
+    list-style: none;
+    margin: 5px;
+    background-color: #2E86C1;
+    font-weight: bold;
+    /* La transición del movimiento va aquí porque el transform está en .item */
+    transition: transform 0.3s ease; 
+    text-align: center;
+}
+
+.item a {
+    text-decoration: none;
+    color: aliceblue;
+    /* La transición del color va aquí porque el color cambia en el link */
+    transition: color 0.3s ease;
+    display: block; /* Para que todo el cuadro sea clickeable */
+    padding: 10px;
+}
+
+/* Cuando pases el mouse sobre el cuadro... */
+.item:hover {
+    transform: translateY(-3px); /* El cuadro sube */
+}
+
+.item:hover a {
+    color: yellow; /* El texto dentro del cuadro cambia a amarillo */
+}
+
+@media(min-width:768px){
+    .contenedor_ul_nav{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    
+  }
+    
+  .cabezera-seccion{
+    display: none;
+  }
+  .cabezera-carrito{
+    display: none;
+  }
+  .seccion_carrito-destok{
+    display: block;
+  }
+     
+}
